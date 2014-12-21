@@ -4,7 +4,13 @@ grunt.initConfig({
     jasmine: {
         src : ['src/**/*.js'],
         options : {
-            specs : 'test/**/*.js'
+            specs : 'test/**/*.js',
+            template: require('grunt-template-jasmine-requirejs'),
+            templateOptions: {
+                requireConfig: {
+                    baseUrl: ''
+                }
+            }
         }
     },
     ts: {
@@ -21,6 +27,7 @@ grunt.initConfig({
 grunt.loadNpmTasks("grunt-ts");
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-jasmine');
+grunt.loadNpmTasks('grunt-contrib-requirejs');
 
 grunt.registerTask("default", ["ts"]);
 

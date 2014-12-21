@@ -7,7 +7,7 @@ export interface ICreature {
     createInstance():ICreatureInstance;
 }
 
-export interface ICreatureInstance extends common_i.IAttackable {
+export interface ICreatureInstance extends IAttackable {
     getAttack():number;
     getHealth():number;
 
@@ -16,3 +16,5 @@ export interface ICreatureInstance extends common_i.IAttackable {
     damage(amount:number);
     heal(amount:number);
 }
+
+export interface IAttackable extends common_i.IAttackable {}
