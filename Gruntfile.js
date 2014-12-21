@@ -15,7 +15,7 @@ grunt.initConfig({
             }
         }
     },
-    clean: ["src/**/*.t.js", "src/**/*.i.js", "src/**/*.js.map", "test/**/*.t.js", "test/**/*.js.map"]
+    clean: ["src/**/*.t.js", "src/**/*.i.js", "src/**/*.e.js", "src/**/*.js.map", "test/**/*.t.js", "test/**/*.js.map"]
 });
 
 grunt.loadNpmTasks("grunt-ts");
