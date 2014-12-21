@@ -5,16 +5,16 @@ import IAttackable = interfaces.IAttackable;
 import ICreatureInstance = interfaces.ICreatureInstance;
 
 class Creature implements interfaces.ICreature {
+    constructor(private attack: number, private health: number) {
+
+    }
     getAttack():number {
-        return undefined;
+        return this.attack;
     }
 
     getHealth():number {
-        return undefined;
+        return this.health;
     }
-
-    createInstance():ICreatureInstance {
-        return undefined;
-    }
-
 }
+
+export = Creature;

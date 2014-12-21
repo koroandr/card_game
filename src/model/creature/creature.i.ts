@@ -3,8 +3,6 @@ import common_i = require('../common.i');
 export interface ICreature {
     getAttack():number;
     getHealth():number;
-
-    createInstance():ICreatureInstance;
 }
 
 export interface ICreatureInstance extends IAttackable {

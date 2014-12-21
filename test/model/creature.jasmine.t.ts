@@ -1,6 +1,7 @@
 /// <reference path="../../DefinitelyTyped/jasmine/jasmine.d.ts" />
 import interfaces = require('../../src/model/creature/creature.i');
 import CreatureInstance = require('../../src/model/creature/creature_instance.t');
+import Creature = require('../../src/model/creature/creature.t');
 
 import ICreature = interfaces.ICreature;
 
@@ -59,6 +60,14 @@ describe('Creatures module', ()=>{
             creature.damage(2);
             creature.heal(3);
             expect(creature.getHealth()).toBe(4);
+        });
+    });
+
+    describe("Creature", ()=>{
+        it("constructs with correct params", ()=>{
+            var creature = new Creature(5, 10);
+            expect(creature.getHealth()).toBe(10);
+            expect(creature.getAttack()).toBe(5);
         });
     });
 });
