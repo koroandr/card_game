@@ -35,6 +35,13 @@ class CreatureInstance implements ICreatureInstance {
         this.health = Math.min(this.health + amount, this.creature.getHealth());
     }
 
+    canAttack():boolean {
+        return undefined;
+    }
+
+    resetBeforeTurn() {
+    }
+
     private attack: number;
     private health: number;
 }

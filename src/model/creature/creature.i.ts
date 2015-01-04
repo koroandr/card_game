@@ -13,6 +13,9 @@ export interface ICreatureInstance extends IAttackable {
 
     damage(amount:number);
     heal(amount:number);
+
+    canAttack(): boolean;
+    resetBeforeTurn();
 }
 
 export interface IAttackable extends common_i.IAttackable {}

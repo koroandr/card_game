@@ -61,6 +61,16 @@ describe('Creatures module', ()=>{
             creature.heal(3);
             expect(creature.getHealth()).toBe(4);
         });
+
+        it("can attack and it's reset", ()=>{
+            var second_creature:CreatureInstance = new CreatureInstance(creature_mock);
+            expect(creature.canAttack()).toBe(true);
+            second_creature.attackBy(creature);
+            expect(creature.canAttack()).toBe(false);
+            expect(second_creature.canAttack()).toBe(true);
+            creature.resetBeforeTurn();
+            expect(creature.canAttack()).toBe(true);
+        });
     });
 
     describe("Creature", ()=>{
